@@ -16,6 +16,8 @@ return new class extends Migration
             $table->enum('customer_id', ['Umum', 'Langganan'])->default('Umum');
             $table->enum('service_id', ['Reguler', 'Express'])->default('Reguler');
             $table->enum('pack_type_id', ['Paket', 'Dokumen', 'Kubikasi'])->default('Paket');
+            $table->unsignedMediumInteger('nama_customer')->unsigned()->nullable();
+
             $table->unsignedSmallInteger('orig_regency_id');
             $table->unsignedSmallInteger('regency_id');
             $table->unsignedMediumInteger('district_id');
@@ -24,7 +26,7 @@ return new class extends Migration
             $table->unsignedInteger('rate_pc')->nullable();
             $table->unsignedInteger('rate_koli')->nullable();
             $table->tinyInteger('min_weight')->unsigned()->default(1);
-            $table->unsignedMediumInteger('nama_customer')->unsigned()->nullable();
+
             $table->string('etd', 10);
             $table->tinyInteger('discount')->unsigned()->nullable();
             $table->unsignedInteger('add_cost')->nullable();

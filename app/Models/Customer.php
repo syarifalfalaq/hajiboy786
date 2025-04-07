@@ -12,8 +12,7 @@ class Customer extends Model
         'network_id',
         'id_customer',
         'sektor_usaha_id',
-        'network_id',
-        'id_cutomer',
+
 
         'kode',
         'nama',

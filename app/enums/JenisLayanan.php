@@ -5,6 +5,6 @@ namespace App\Enums;
 enum JenisLayanan: string
 {
 
-    case REGULER = 'Reguler';
-    case EXPRESS = 'Express';
+    case Reguler = 'Reguler';
+    case Express = 'Express';
 }

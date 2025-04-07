@@ -146,12 +146,13 @@ class RateResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('customer_id') //nama_customer
                     ->label('Jenis Customer')
-                    ->hidden()
+                    // ->hidden()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('customer.nama') //nama_customer
                     ->label('Nama Langganan')
                     ->sortable()
-                    ->hidden()
+                    // ->hidden()
+
                     ->searchable(),
 
                 Tables\Columns\TextColumn::make('service_id')->label('Jenis Layanan')
@@ -160,11 +161,15 @@ class RateResource extends Resource
                 Tables\Columns\TextColumn::make('pack_type_id')->label('Jenis Barang')
                     //->numeric()
                     ->sortable(),
-                //  Tables\Columns\TextColumn::make('province.name')->label('Provinsi Tujuan')
+                Tables\Columns\TextColumn::make('province.name')->label('Provinsi Tujuan')
 
-                //        ->sortable(),
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true)
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('originCities.name')->label('Kabupaten/Kota Asal')
-                    ->numeric()
+
+                    ->toggleable(isToggledHiddenByDefault: true)
+
                     ->sortable(),
                 Tables\Columns\TextColumn::make('regency.name')->label('Kabupaten/Kota Tujuan')
                     ->numeric()

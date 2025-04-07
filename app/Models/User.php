@@ -25,6 +25,7 @@ class User extends Authenticatable
         'phone',
         'gender',
         'role_id',
+        'roles',
         'network_id',
         'status',
         'address',
